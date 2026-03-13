@@ -50,11 +50,17 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-app.UseForwardedHeaders(new ForwardedHeadersOptions
+var options = new ForwardedHeadersOptions
 {
-    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-});
+    ForwardedHeaders =
+        ForwardedHeaders.XForwardedFor |
+        ForwardedHeaders.XForwardedProto
+};
 
+options.KnownNetworks.Clear();
+options.KnownProxies.Clear();
+
+app.UseForwardedHeaders(options);
 // Configure the HTTP request pipeline.
 app.UseRouting();
 app.UseCors();
