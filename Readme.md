@@ -1,7 +1,5 @@
 # Project Title: Date Matcher API with Monitoring
 
-# Introduction
-
 ## Description
 
 A web API that finds all month–year pairs where a specific day of the month falls on a specific weekday (e.g., all Saturdays that are the 15th) within a given year range. Built-in logging and monitoring dashboard.
