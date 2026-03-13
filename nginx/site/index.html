@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date match finder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="mb-4 mt-4">Date Finder</h2>
+
+      <p id="error" class="text-danger mb-4"></p>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+              <h5 class="mb-0">Date Finder</h5>
+            </div>
+
+            <div class="card-body">
+              <form id="dateForm">
+                <div class="mb-3">
+                  <label class="form-label">Start Year</label>
+                  <input
+                    id="startYear"
+                    type="number"
+                    class="form-control"
+                    placeholder="e.g. 2025"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">End Year</label>
+                  <input
+                    id="endYear"
+                    type="number"
+                    class="form-control"
+                    placeholder="e.g. 2030"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Day of Month</label>
+                  <input
+                    id="dayOfMonth"
+                    type="number"
+                    class="form-control"
+                    placeholder="1 - 31"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Day of Week</label>
+
+                  <select id="targetDayOfWeek" class="form-select">
+                    <option>Sunday</option>
+                    <option>Monday</option>
+                    <option>Tuesday</option>
+                    <option>Wednesday</option>
+                    <option>Thursday</option>
+                    <option>Friday</option>
+                    <option>Saturday</option>
+                  </select>
+                </div>
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">
+                    Find Matches
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div id="resultCard" class="card d-none">
+            <div class="card-header">Results</div>
+
+            <ul id="resultsList" class="list-group list-group-flush"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
