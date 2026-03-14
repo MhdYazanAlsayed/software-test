@@ -164,7 +164,7 @@ An **Nginx reverse proxy** is placed in front of the API.
 
 Responsibilities:
 
-- Serving the static HTML monitoring dashboard
+- Serving the static HTML
 - Acting as a protection layer for the API
 - Applying rate limiting
 - Allowing future horizontal scaling of API instances
